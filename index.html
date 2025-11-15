@@ -11,30 +11,93 @@
     <h1>Jeux à Télécharger</h1>
     <nav>
       <a href="index.html">Accueil</a>
+      <button id="add-game-btn" class="add-game-btn">Ajouter un jeu</button>
     </nav>
   </header>
   <main>
     <section class="games-list">
-      <!-- Exemple de jeux; à remplir dynamiquement -->
-      <article class="game-card">
-        <img src="assets/game1.jpg" alt="Game 1">
-        <h2>Super Adventure</h2>
-        <p>Un jeu d’aventure palpitant à explorer !</p>
-        <a href="game.html?id=1" class="details-btn">Voir Fiche</a>
-        <a href="downloads/super-adventure.zip" class="download-btn">Télécharger</a>
-      </article>
-      <article class="game-card">
-        <img src="assets/game2.jpg" alt="Game 2">
-        <h2>Space Fight</h2>
-        <p>Affrontez les ennemis dans l’espace dans ce jeu d’action !</p>
-        <a href="game.html?id=2" class="details-btn">Voir Fiche</a>
-        <a href="downloads/space-fight.zip" class="download-btn">Télécharger</a>
-      </article>
-      <!-- Ajoutez d'autres jeux ici -->
+      <!-- Place ici la génération JS des jeux -->
     </section>
   </main>
+
+  <!-- MODAL AJOUT JEU -->
+  <div id="add-game-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="add-game-form">
+        <label for="pwd">Mot de passe :</label>
+        <input type="password" id="pwd" required>
+        <div id="pwd-section" style="display: none;">
+          <label for="name">Nom du jeu:</label>
+          <input type="text" id="name" required>
+          <label for="desc">Description:</label>
+          <input type="text" id="desc" required>
+          <label for="image">URL de l'image (.assets/ > exemple : .assets/mon-jeu.jpg):</label>
+          <input type="text" id="image" required>
+          <label for="download">Lien de téléchargement (.downloads/):</label>
+          <input type="text" id="download" required>
+          <button type="submit">Ajouter</button>
+        </div>
+        <button type="button" id="verify-pwd">Entrer</button>
+      </form>
+      <div id="add-game-message" style="color:red;"></div>
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2025 Jeux à Télécharger</p>
   </footer>
+  <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Jeux à Télécharger</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Jeux à Télécharger</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <button id="add-game-btn" class="add-game-btn">Ajouter un jeu</button>
+    </nav>
+  </header>
+  <main>
+    <section class="games-list">
+      <!-- Place ici la génération JS des jeux -->
+    </section>
+  </main>
+
+  <!-- MODAL AJOUT JEU -->
+  <div id="add-game-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="add-game-form">
+        <label for="pwd">Mot de passe :</label>
+        <input type="password" id="pwd" required>
+        <div id="pwd-section" style="display: none;">
+          <label for="name">Nom du jeu:</label>
+          <input type="text" id="name" required>
+          <label for="desc">Description:</label>
+          <input type="text" id="desc" required>
+          <label for="image">URL de l'image (.assets/ > exemple : .assets/mon-jeu.jpg):</label>
+          <input type="text" id="image" required>
+          <label for="download">Lien de téléchargement (.downloads/):</label>
+          <input type="text" id="download" required>
+          <button type="submit">Ajouter</button>
+        </div>
+        <button type="button" id="verify-pwd">Entrer</button>
+      </form>
+      <div id="add-game-message" style="color:red;"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jeux à Télécharger</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
